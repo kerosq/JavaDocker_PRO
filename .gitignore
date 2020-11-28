@@ -5,7 +5,7 @@
 
 # Docker
 
-docker/postgres_data
+docker/postgres_data/data
 
 
 .idea

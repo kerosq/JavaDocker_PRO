@@ -6,6 +6,7 @@ services:
     volumes:
       - "./postgres_data/postgres.conf:/usr/local/etc/postgres/postgres.conf"
       - "./postgres_data/data:/var/lib/postgresql/data:delegated"
+      - "./schemas/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql"
     command: "postgres -c config_file=/usr/local/etc/postgres/postgres.conf"
     ports:
       - 5432:5432
