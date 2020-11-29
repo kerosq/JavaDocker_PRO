@@ -3,8 +3,7 @@ package com.utils;
 import java.sql.*;
 import java.util.Properties;
 
-public class Database
-{
+public class Database {
 
     // init database constants
     private static final String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
@@ -23,10 +22,8 @@ public class Database
     private Statement statement;
 
     // create properties
-    private Properties getProperties()
-    {
-        if (properties == null)
-        {
+    private Properties getProperties() {
+        if (properties == null) {
             properties = new Properties();
 
             properties.setProperty("user", USERNAME);
@@ -40,22 +37,17 @@ public class Database
     }
 
     /**
-     * Connect to the database  
+     * Connect to the database
      *
      * @return Connection
      */
-    public Connection connect()
-    {
-        if (connection == null)
-        {
-            try
-            {
+    public Connection connect() {
+        if (connection == null) {
+            try {
                 Class.forName(DATABASE_DRIVER);
 
                 connection = (Connection) DriverManager.getConnection(DATABASE_URL, getProperties());
-            }
-            catch (ClassNotFoundException | SQLException e)
-            {
+            } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -65,19 +57,14 @@ public class Database
     /**
      * Disconnect database
      */
-    public void disconnect()
-    {
-        if (connection != null)
-        {
-            try
-            {
+    public void disconnect() {
+        if (connection != null) {
+            try {
                 connection.close();
 
                 connection = null;
 
-            }
-            catch (SQLException e)
-            {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -90,8 +77,7 @@ public class Database
      * @return
      * @throws SQLException
      */
-    public ResultSet select(String query) throws SQLException
-    {
+    public ResultSet select(String query) throws SQLException {
         statement = connection.createStatement();
 
         ResultSet resultSet = statement.executeQuery(query);
@@ -106,8 +92,7 @@ public class Database
      * @return
      * @throws SQLException
      */
-    public int createOrUpdateOrDelete(String query) throws SQLException
-    {
+    public int createOrUpdateOrDelete(String query) throws SQLException {
         statement = connection.createStatement();
 
         int result = statement.executeUpdate(query);

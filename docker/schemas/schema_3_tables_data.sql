@@ -1,0 +1,1 @@
+INSERT INTO cuenta_usuario (username, "password", email) VALUES('kevin', 'prueba', 'kevin@gmail.com');
