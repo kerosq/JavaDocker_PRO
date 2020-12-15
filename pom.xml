@@ -11,6 +11,9 @@
     <properties>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
+        <sonar.projectKey>kerosq_JavaDocker_PRO</sonar.projectKey>
+        <sonar.organization>kv1ncq</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     
 </project>
