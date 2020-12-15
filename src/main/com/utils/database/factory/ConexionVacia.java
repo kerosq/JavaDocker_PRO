@@ -1,6 +1,6 @@
-package com.utils.database.factory;
+package main.com.utils.database.factory;
 
-import com.utils.database.interfaces.IDatabase;
+import main.com.utils.database.interfaces.IDatabase;
 
 import java.sql.Connection;
 

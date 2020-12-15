@@ -1,4 +1,4 @@
-package com.utils.database.interfaces;
+package main.com.utils.database.interfaces;
 
 import java.sql.Connection;
 import java.util.Properties;

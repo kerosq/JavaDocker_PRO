@@ -1,9 +1,9 @@
-package com.utils.database;
+package main.com.utils.database;
 
 
-import com.utils.database.factory.ConexionPG;
-import com.utils.database.factory.ConexionVacia;
-import com.utils.database.interfaces.IDatabase;
+import main.com.utils.database.factory.ConexionPG;
+import main.com.utils.database.factory.ConexionVacia;
+import main.com.utils.database.interfaces.IDatabase;
 
 import java.util.Properties;
 
