@@ -2,8 +2,11 @@ package com.home;
 
 import com.utils.database.Database;
 import com.utils.database.interfaces.IDatabase;
+import com.utils.item.Item;
+import com.utils.item.factory.Escribe;
 
 import java.util.Properties;
+
 
 public class Main {
 
@@ -11,13 +14,13 @@ public class Main {
         
         Database fabrica = new Database();
         Properties properties = new Properties();
-/*
-        this.DATABASE_DRIVER = "org.postgresql.Driver";
-        this.DATABASE_URL = "jdbc:postgresql://localhost:5432/Athena";
-        this.USERNAME = "admin_db";
-        this.PASSWORD = "admin_12345678";
-        this.MAX_POOL = "250";
- */
+
+        Escribe item = new Escribe("kevin","xml","D:\\");
+        
+        System.out.println(item.toString());
+        
+        item.Write();
+        
         properties.setProperty("DATABASE_DRIVER","org.postgresql.Driver");
         properties.setProperty("DATABASE_URL","jdbc:postgresql://localhost:5432/Athena");
         properties.setProperty("user", "admin_db");
